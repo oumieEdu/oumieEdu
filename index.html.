@@ -1,0 +1,523 @@
+HTML
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Success Hub | Master Your Classes, Build Your Edge</title>
+    <style>
+        /* --- DESIGN SYSTEM & TOKENS --- */
+        :root {
+            --primary-blue: #1e3a8a;
+            --secondary-blue: #3b82f6;
+            --soft-green: #10b981;
+            --dark-text: #1f2937;
+            --light-bg: #f9fafb;
+            --white: #ffffff;
+            --gray-border: #e5e7eb;
+            --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-main);
+            color: var(--dark-text);
+            background-color: var(--light-bg);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* --- BUTTONS --- */
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            font-weight: 600;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-blue);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--secondary-blue);
+        }
+
+        .btn-secondary {
+            background-color: var(--soft-green);
+            color: var(--white);
+        }
+
+        .btn-secondary:hover {
+            opacity: 0.9;
+        }
+
+        /* --- STICKY CONVERSION BAR --- */
+        .sticky-bar {
+            background-color: var(--primary-blue);
+            color: var(--white);
+            text-align: center;
+            padding: 10px 20px;
+            font-size: 0.95rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .sticky-bar a {
+            color: var(--soft-green);
+            font-weight: bold;
+            margin-left: 8px;
+            text-decoration: underline;
+        }
+
+        /* --- NAVBAR --- */
+        .navbar {
+            background-color: var(--white);
+            border-bottom: 1px solid var(--gray-border);
+            padding: 20px 0;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: var(--primary-blue);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            color: var(--dark-text);
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--secondary-blue);
+        }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            background-color: var(--white);
+            padding: 80px 0;
+            text-align: center;
+            border-bottom: 1px solid var(--gray-border);
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            color: var(--primary-blue);
+            line-height: 1.2;
+            margin-bottom: 15px;
+            font-weight: 800;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: #4b5563;
+            max-width: 700px;
+            margin: 0 auto 30px auto;
+        }
+
+        .hero-ctas {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        /* --- FEATURED CATEGORIES --- */
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            color: var(--primary-blue);
+            margin: 50px 0 30px 0;
+        }
+
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin-bottom: 60px;
+        }
+
+        .category-card {
+            background-color: var(--white);
+            padding: 30px 20px;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid var(--gray-border);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            border-color: var(--secondary-blue);
+        }
+
+        .category-card h3 {
+            color: var(--primary-blue);
+            margin-bottom: 10px;
+        }
+
+        /* --- LATEST ARTICLES --- */
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .article-card {
+            background-color: var(--white);
+            border-radius: 8px;
+            border: 1px solid var(--gray-border);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .article-img-placeholder {
+            background: linear-gradient(135deg, var(--secondary-blue), var(--primary-blue));
+            height: 180px;
+            width: 100%;
+        }
+
+        .article-content {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .article-tag {
+            align-self: flex-start;
+            background-color: #eff6ff;
+            color: var(--secondary-blue);
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 4px 8px;
+            border-radius: 4px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .article-content h3 {
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+            color: var(--dark-text);
+        }
+
+        .article-content p {
+            color: #6b7280;
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        /* --- LEAD MAGNET CONVERSION BLOCK --- */
+        .lead-magnet-box {
+            background-color: #eff6ff;
+            border: 2px dashed var(--secondary-blue);
+            border-radius: 12px;
+            padding: 4px;
+            margin: 60px 0;
+            text-align: center;
+        }
+
+        .lead-magnet-inner {
+            background-color: var(--white);
+            padding: 40px 30px;
+            border-radius: 8px;
+        }
+
+        .lead-magnet-inner h2 {
+            color: var(--primary-blue);
+            margin-bottom: 10px;
+            font-size: 1.8rem;
+        }
+
+        .lead-magnet-inner p {
+            margin-bottom: 25px;
+            color: #4b5563;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .optin-form {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            max-width: 500px;
+            margin: 0 auto;
+            flex-wrap: wrap;
+        }
+
+        .optin-form input[type="email"] {
+            flex-grow: 1;
+            padding: 12px 16px;
+            border: 1px solid var(--gray-border);
+            border-radius: 6px;
+            font-size: 1rem;
+            min-width: 250px;
+        }
+
+        /* --- INLINE CONTENT UPGRADE (FOR BLOG POSTS) --- */
+        .inline-cta {
+            background-color: #f0fdf4;
+            border-left: 4px solid var(--soft-green);
+            padding: 20px;
+            margin: 30px 0;
+            border-radius: 0 8px 8px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background-color: #111827;
+            color: #9ca3af;
+            padding: 60px 0 30px 0;
+            margin-top: 80px;
+            font-size: 0.95rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul a:hover {
+            color: var(--white);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #374151;
+            padding-top: 30px;
+            text-align: center;
+            font-size: 0.85rem;
+        }
+
+        /* --- RESPONSIVE MOBILE TWEAKS --- */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .nav-container { flex-direction: column; gap: 15px; }
+            .optin-form { flex-direction: column; width: 100%; }
+            .optin-form input[type="email"] { width: 100%; }
+            .inline-cta { flex-direction: column; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. STICKY EMAIL CONVERSION BAR -->
+    <div class="sticky-bar">
+        🔥 Accessing from mobile? <a href="#download-section">Get your free University Survival Blueprint PDF.</a>
+    </div>
+
+    <!-- 2. NAVBAR -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">🎓 StudentSuccessHub</a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">ICT Tutorials</a></li>
+                    <li><a href="#">Research Guides</a></li>
+                    <li><a href="#">Scholarships</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 3. HERO SECTION -->
+    <section class="hero">
+        <div class="container">
+            <h1>Master Your Classes.<br>Build Your Technical Edge.</h1>
+            <p>Practical programming tutorials, structural research writing frameworks, and academic career opportunities designed for African university students.</p>
+            <div class="hero-ctas">
+                <a href="#articles" class="btn btn-primary">Start Learning Free</a>
+                <a href="#download-section" class="btn btn-secondary">Download Free Study Toolkit</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. FEATURED CATEGORIES -->
+    <section class="container">
+        <h2 class="section-title">Explore Study Pillars</h2>
+        <div class="categories-grid">
+            <div class="category-card">
+                <h3>ICT & Coding</h3>
+                <p>Python, data structures, and database principles simplified.</p>
+            </div>
+            <div class="category-card">
+                <h3>Research Writing</h3>
+                <p>Step-by-step blueprints for literature reviews and assignments.</p>
+            </div>
+            <div class="category-card">
+                <h3>Exam Success</h3>
+                <p>Evidence-based frameworks to study effectively without cramming.</p>
+            </div>
+            <div class="category-card">
+                <h3>Opportunities</h3>
+                <p>Scholarship tracking and career advice templates.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. HIGH-CONVERTING LEAD MAGNET OPT-IN BLOCK -->
+    <section id="download-section" class="container">
+        <div class="lead-magnet-box">
+            <div class="lead-magnet-inner">
+                <h2>Free Download: The Ultimate University Survival Blueprint</h2>
+                <p>Join 2,000+ ambitious students. Get instant access to our curated packet containing an essay structure template, Python beginner syntax checklist, and an active scholarship tracker spreadsheet.</p>
+                <form class="optin-form" onsubmit="alert('Success! Check your email inbox to confirm your free download.'); return false;">
+                    <input type="email" placeholder="Enter your student email address..." required>
+                    <button type="submit" class="btn btn-secondary">Get Instant Access →</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. LATEST CONTENT GRID -->
+    <main id="articles" class="container">
+        <h2 class="section-title">Latest Practical Guides</h2>
+        <div class="articles-grid">
+            
+            <!-- Article 1 -->
+            <article class="article-card">
+                <div class="article-img-placeholder"></div>
+                <div class="article-content">
+                    <span class="article-tag">Programming</span>
+                    <h3>Python Loops Explained Cleanly for Absolute Beginners</h3>
+                    <p>Struggling with 'for' and 'while' concepts? We unpack loop syntax visually with real-world student grading system application examples.</p>
+                    <a href="#" style="color: var(--secondary-blue); font-weight: 600;">Read Tutorial →</a>
+                </div>
+            </article>
+
+            <!-- Article 2 -->
+            <article class="article-card">
+                <div class="article-img-placeholder" style="background: linear-gradient(135deg, #10b981, #047857);"></div>
+                <div class="article-content">
+                    <span class="article-tag">Research Writing</span>
+                    <h3>How to Structure a Comprehensive Literature Review Blueprint</h3>
+                    <p>Stop staring at a blank page. Use this verified 5-part matrix layout structure to align your sources quickly according to APA 7 style rule requirements.</p>
+                    <a href="#" style="color: var(--secondary-blue); font-weight: 600;">Read Tutorial →</a>
+                </div>
+            </article>
+
+            <!-- Article 3 -->
+            <article class="article-card">
+                <div class="article-img-placeholder" style="background: linear-gradient(135deg, #f59e0b, #b45309);"></div>
+                <div class="article-content">
+                    <span class="article-tag">Study Skills</span>
+                    <h3>How to Pass Heavy ICT Exams Without Cramming at the Last Minute</h3>
+                    <p>An inside look at active recall system workflows and spaced repetition schedules customized specifically for computer science and data curriculum fields.</p>
+                    <a href="#" style="color: var(--secondary-blue); font-weight: 600;">Read Tutorial →</a>
+                </div>
+            </article>
+
+        </div>
+
+        <!-- EXAMPLE OF AN INLINE CONTENT UPGRADE CONVERSION BLOCK inside an article stream -->
+        <div class="inline-cta">
+            <div>
+                <strong style="color: var(--primary-blue); display: block; margin-bottom: 4px;">🎁 Companion Resource Upgrade</strong>
+                <p style="font-size: 0.95rem; margin: 0;">Reading our Python series? Download the standalone Python syntax cheat sheet PDF right now.</p>
+            </div>
+            <a href="#download-section" class="btn btn-primary" style="padding: 8px 16px; font-size: 0.9rem;">Grab Cheat Sheet</a>
+        </div>
+    </main>
+
+    <!-- 7. FOOTER SYSTEM -->
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <h4>StudentSuccessHub</h4>
+                <p>Emporing next-generation African scholars and builders with tools, execution tutorials, and transparent resources.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Navigation Hub</h4>
+                <ul>
+                    <li><a href="#">Articles Archive</a></li>
+                    <li><a href="#">Resource Vault</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Team</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Legal & Policies</h4>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Sponsorship Requests</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom container">
+            <p>&copy; 2026 Student Success Hub. All global student rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
