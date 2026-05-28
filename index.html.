@@ -4,7 +4,7 @@ HTML
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Success Hub | Master Your Classes, Build Your Edge</title>
+    <title>oumieEdu | Build Your Confidence, Master Your Studies</title>
     <style>
         /* --- DESIGN SYSTEM & TOKENS --- */
         :root {
@@ -302,7 +302,7 @@ HTML
             min-width: 250px;
         }
 
-        /* --- INLINE CONTENT UPGRADE (FOR BLOG POSTS) --- */
+        /* --- INLINE CONTENT UPGRADE --- */
         .inline-cta {
             background-color: #f0fdf4;
             border-left: 4px solid var(--soft-green);
@@ -371,20 +371,19 @@ HTML
 
     <!-- 1. STICKY EMAIL CONVERSION BAR -->
     <div class="sticky-bar">
-        🔥 Accessing from mobile? <a href="#download-section">Get your free University Survival Blueprint PDF.</a>
+        ✨ Nervous about speaking up in class? <a href="#download-section">Download our free Class Participation Framework PDF.</a>
     </div>
 
     <!-- 2. NAVBAR -->
     <header class="navbar">
         <div class="container nav-container">
-            <a href="#" class="logo">🎓 StudentSuccessHub</a>
+            <a href="#" class="logo">🎓 oumieEdu</a>
             <nav>
                 <ul class="nav-links">
                     <li><a href="#">Home</a></li>
-                    <li><a href="#">ICT Tutorials</a></li>
-                    <li><a href="#">Research Guides</a></li>
-                    <li><a href="#">Scholarships</a></li>
-                    <li><a href="#">About</a></li>
+                    <li><a href="#">Confidence Boosters</a></li>
+                    <li><a href="#">Study Guides</a></li>
+                    <li><a href="#">Class Tips</a></li>
                 </ul>
             </nav>
         </div>
@@ -393,34 +392,34 @@ HTML
     <!-- 3. HERO SECTION -->
     <section class="hero">
         <div class="container">
-            <h1>Master Your Classes.<br>Build Your Technical Edge.</h1>
-            <p>Practical programming tutorials, structural research writing frameworks, and academic career opportunities designed for African university students.</p>
+            <h1>Speak Up. Study Smarter.<br>Own Your Education.</h1>
+            <p>Practical advice, actionable guides, and community resources to help university students overcome anxiety, build bold classroom confidence, and excel in their studies.</p>
             <div class="hero-ctas">
-                <a href="#articles" class="btn btn-primary">Start Learning Free</a>
-                <a href="#download-section" class="btn btn-secondary">Download Free Study Toolkit</a>
+                <a href="#articles" class="btn btn-primary">Read Free Guides</a>
+                <a href="#download-section" class="btn btn-secondary">Get Free Confidence Toolkit</a>
             </div>
         </div>
     </section>
 
     <!-- 4. FEATURED CATEGORIES -->
     <section class="container">
-        <h2 class="section-title">Explore Study Pillars</h2>
+        <h2 class="section-title">Our Growth Pillars</h2>
         <div class="categories-grid">
             <div class="category-card">
-                <h3>ICT & Coding</h3>
-                <p>Python, data structures, and database principles simplified.</p>
+                <h3>Classroom Confidence</h3>
+                <p>Overcome public speaking anxiety and participate boldly in lectures.</p>
             </div>
             <div class="category-card">
-                <h3>Research Writing</h3>
-                <p>Step-by-step blueprints for literature reviews and assignments.</p>
+                <h3>Effective Study Skills</h3>
+                <p>Learn structural frameworks to grasp complex subjects easily.</p>
             </div>
             <div class="category-card">
-                <h3>Exam Success</h3>
-                <p>Evidence-based frameworks to study effectively without cramming.</p>
+                <h3>Academic Mindset</h3>
+                <p>Beat procrastination, handle exam pressure, and reduce study stress.</p>
             </div>
             <div class="category-card">
-                <h3>Opportunities</h3>
-                <p>Scholarship tracking and career advice templates.</p>
+                <h3>Student Leadership</h3>
+                <p>Build communication tools to stand out among your peers.</p>
             </div>
         </div>
     </section>
@@ -429,11 +428,11 @@ HTML
     <section id="download-section" class="container">
         <div class="lead-magnet-box">
             <div class="lead-magnet-inner">
-                <h2>Free Download: The Ultimate University Survival Blueprint</h2>
-                <p>Join 2,000+ ambitious students. Get instant access to our curated packet containing an essay structure template, Python beginner syntax checklist, and an active scholarship tracker spreadsheet.</p>
-                <form class="optin-form" onsubmit="alert('Success! Check your email inbox to confirm your free download.'); return false;">
-                    <input type="email" placeholder="Enter your student email address..." required>
-                    <button type="submit" class="btn btn-secondary">Get Instant Access →</button>
+                <h2>Free Download: The Ultimate Academic Confidence Toolkit</h2>
+                <p>Join a community of ambitious students. Get instant access to scripts on how to ask questions in massive lecture halls, a preparation checklist, and an active recall study schedule template.</p>
+                <form class="optin-form" onsubmit="alert('Success! Check your email inbox to confirm your free toolkit download.'); return false;">
+                    <input type="email" placeholder="Enter your best email address..." required>
+                    <button type="submit" class="btn btn-secondary">Download Free Toolkit →</button>
                 </form>
             </div>
         </div>
@@ -441,17 +440,17 @@ HTML
 
     <!-- 6. LATEST CONTENT GRID -->
     <main id="articles" class="container">
-        <h2 class="section-title">Latest Practical Guides</h2>
+        <h2 class="section-title">Latest Student Guides</h2>
         <div class="articles-grid">
             
             <!-- Article 1 -->
             <article class="article-card">
                 <div class="article-img-placeholder"></div>
                 <div class="article-content">
-                    <span class="article-tag">Programming</span>
-                    <h3>Python Loops Explained Cleanly for Absolute Beginners</h3>
-                    <p>Struggling with 'for' and 'while' concepts? We unpack loop syntax visually with real-world student grading system application examples.</p>
-                    <a href="#" style="color: var(--secondary-blue); font-weight: 600;">Read Tutorial →</a>
+                    <span class="article-tag">Confidence</span>
+                    <h3>5 Simple Tricks to Ask Questions in Lectures Without Panic</h3>
+                    <p>Feeling terrified when raising your hand? We break down psychological shifts and exact sentence scripts you can use to contribute confidently today.</p>
+                    <a href="#" style="color: var(--secondary-blue); font-weight: 600;">Read Guide →</a>
                 </div>
             </article>
 
@@ -459,10 +458,10 @@ HTML
             <article class="article-card">
                 <div class="article-img-placeholder" style="background: linear-gradient(135deg, #10b981, #047857);"></div>
                 <div class="article-content">
-                    <span class="article-tag">Research Writing</span>
-                    <h3>How to Structure a Comprehensive Literature Review Blueprint</h3>
-                    <p>Stop staring at a blank page. Use this verified 5-part matrix layout structure to align your sources quickly according to APA 7 style rule requirements.</p>
-                    <a href="#" style="color: var(--secondary-blue); font-weight: 600;">Read Tutorial →</a>
+                    <span class="article-tag">Study Methods</span>
+                    <h3>The Spaced Repetition Matrix: Study Less, Remember More</h3>
+                    <p>Stop cramming the night before your exams. Learn how to map your study intervals systematically to move lecture information seamlessly into long-term memory.</p>
+                    <a href="#" style="color: var(--secondary-blue); font-weight: 600;">Read Guide →</a>
                 </div>
             </article>
 
@@ -470,22 +469,22 @@ HTML
             <article class="article-card">
                 <div class="article-img-placeholder" style="background: linear-gradient(135deg, #f59e0b, #b45309);"></div>
                 <div class="article-content">
-                    <span class="article-tag">Study Skills</span>
-                    <h3>How to Pass Heavy ICT Exams Without Cramming at the Last Minute</h3>
-                    <p>An inside look at active recall system workflows and spaced repetition schedules customized specifically for computer science and data curriculum fields.</p>
-                    <a href="#" style="color: var(--secondary-blue); font-weight: 600;">Read Tutorial →</a>
+                    <span class="article-tag">Class Participation</span>
+                    <h3>How to Overcome Imposter Syndrome in Competitive Classrooms</h3>
+                    <p>Do you feel like everyone else knows exactly what they are doing while you're left behind? Let's unpack constructive mental models to anchor your inner security.</p>
+                    <a href="#" style="color: var(--secondary-blue); font-weight: 600;">Read Guide →</a>
                 </div>
             </article>
 
         </div>
 
-        <!-- EXAMPLE OF AN INLINE CONTENT UPGRADE CONVERSION BLOCK inside an article stream -->
+        <!-- INLINE CONTENT UPGRADE -->
         <div class="inline-cta">
             <div>
-                <strong style="color: var(--primary-blue); display: block; margin-bottom: 4px;">🎁 Companion Resource Upgrade</strong>
-                <p style="font-size: 0.95rem; margin: 0;">Reading our Python series? Download the standalone Python syntax cheat sheet PDF right now.</p>
+                <strong style="color: var(--primary-blue); display: block; margin-bottom: 4px;">🎁 Extra Resource Upgrade</strong>
+                <p style="font-size: 0.95rem; margin: 0;">Want our step-by-step Class Presentation Template? Grab it instantly below.</p>
             </div>
-            <a href="#download-section" class="btn btn-primary" style="padding: 8px 16px; font-size: 0.9rem;">Grab Cheat Sheet</a>
+            <a href="#download-section" class="btn btn-primary" style="padding: 8px 16px; font-size: 0.9rem;">Grab Presentation Script</a>
         </div>
     </main>
 
@@ -493,29 +492,28 @@ HTML
     <footer>
         <div class="container footer-grid">
             <div class="footer-col">
-                <h4>StudentSuccessHub</h4>
-                <p>Emporing next-generation African scholars and builders with tools, execution tutorials, and transparent resources.</p>
+                <h4>oumieEdu</h4>
+                <p>Empowering students to find their voice, master foundational study routines, and confidently unlock academic excellence.</p>
             </div>
             <div class="footer-col">
-                <h4>Navigation Hub</h4>
+                <h4>Explore</h4>
                 <ul>
-                    <li><a href="#">Articles Archive</a></li>
-                    <li><a href="#">Resource Vault</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Contact Team</a></li>
+                    <li><a href="#">All Student Articles</a></li>
+                    <li><a href="#">Resource Library</a></li>
+                    <li><a href="#">About oumieEdu</a></li>
+                    <li><a href="#">Get in Touch</a></li>
                 </ul>
             </div>
             <div class="footer-col">
-                <h4>Legal & Policies</h4>
+                <h4>Legal Info</h4>
                 <ul>
                     <li><a href="#">Privacy Policy</a></li>
                     <li><a href="#">Terms of Service</a></li>
-                    <li><a href="#">Sponsorship Requests</a></li>
                 </ul>
             </div>
         </div>
         <div class="footer-bottom container">
-            <p>&copy; 2026 Student Success Hub. All global student rights reserved.</p>
+            <p>&copy; 2026 oumieEdu. All student success rights reserved.</p>
         </div>
     </footer>
 
